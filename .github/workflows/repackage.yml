@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout JS SDK
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: stellar/js-stellar-sdk
           fetch-depth: 0
           persist-credentials: false
 
       - name: Checkout Bower
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: stellar/bower-js-stellar-sdk
           fetch-depth: 0
@@ -41,7 +41,7 @@ jobs:
           fi
 
       - name: Install Node (18.x)
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '18.x'
 
